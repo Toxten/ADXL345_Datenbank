@@ -5,6 +5,8 @@ import time
 i2c = I2C(scl=Pin(22),sda=Pin(21), freq=10000)
 adx = ADXL345.ADXL345(i2c)
 
+" The acceleration is displayed in g"
+
 while True:
     x=adx.xValue
     y=adx.yValue
